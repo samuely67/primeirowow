@@ -28,3 +28,4 @@ print(nome)
 print(idade)
 print(altura)
 print(estudando)
+
