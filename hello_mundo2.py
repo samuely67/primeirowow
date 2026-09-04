@@ -1,6 +1,6 @@
 print("ola amigos como estao tranquilos")
 
-nome="samuel"
+nome="samuelson"
 idade"19"
 
 estudante="true"

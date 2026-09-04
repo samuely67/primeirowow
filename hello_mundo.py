@@ -1,5 +1,5 @@
 #declarando e inicializando as variaveis
-nome ="ana"
+nome ="pedro"
 idade = 20
 altura = 1.58
 peso= 70

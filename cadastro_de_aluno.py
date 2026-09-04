@@ -1,5 +1,5 @@
 #exercicio 4 cadastro de aluno
-Nome= "ana"
+Nome= "brab"
 idade="67"
 curso="atirador_de_elite"
 nota="100"
