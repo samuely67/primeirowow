@@ -104,3 +104,5 @@ elif(opcao_menu == 4):
     print("Você saiu da operação. Reinicie para outras operações.")
 else:
     print("Número inválido. Reinicie a operação.")
+
+    
