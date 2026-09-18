@@ -22,7 +22,25 @@ nomes.append("maria")
 #adicionar no final da lista insert().
 nomes.insert(1, "lucas")
 
-#para eremover se usa o remove(), e pop() para trabalhar em uma posiçao
+#para remover se usa o remove(), e pop() para trabalhar em uma posiçao
 nomes.remove("pedro")
 nomes.pop(0)
+
+#o for faz com que o codigo seja executado para cada item da lista
+nomes=["ana","carlos", "joao"]
+for nome in nomes:
+print(nome)
+
+#percorrendo numeros
+idades=[15,16,17]
+for idade in idade:
+    print(idade)
+
+#calculos durante a repetiçao
+notas=[5,7]
+soma=0
+for nota in notas:
+    soma=soma+nota
+    print(soma)
+
 
