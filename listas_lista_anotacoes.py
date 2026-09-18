@@ -44,3 +44,4 @@ for nota in notas:
     print(soma)
 
 
+
