@@ -1,7 +1,3 @@
-# Lista onde os livros ficarão armazenados
-
-
-
 def adicionar_livro(biblioteca):
     print("\n===== ADICIONAR LIVRO =====")
 
@@ -11,9 +7,9 @@ def adicionar_livro(biblioteca):
         print("Código inválido.")
         return
 
-    # Verifica se o código já existe
+    # Verifica se o código já existe na lista
     for livro in biblioteca:
-        if livro[0] == codigo:
+        if livro["codigo"] == codigo:
             print("Já existe um livro com esse código.")
             return
 
@@ -41,39 +37,45 @@ def adicionar_livro(biblioteca):
         print("A quantidade deve ser maior que zero.")
         return
 
-    livro = [codigo, titulo, autor, ano, quantidade]
+    # Salva o livro como dicionário
+    livro = {
+        "codigo": codigo,
+        "titulo": titulo,
+        "autor": autor,
+        "ano": ano,
+        "quantidade": quantidade
+    }
 
     biblioteca.append(livro)
-
     print("\nLivro adicionado com sucesso!")
 
 
-def excluir_livro():
+def excluir_livro(biblioteca):
     print("\n===== EXCLUIR LIVRO =====")
 
-    if len(livros) == 0:
+    if len(biblioteca) == 0:
         print("Não existem livros cadastrados.")
         return
 
     codigo = input("Digite o código do livro que deseja excluir: ")
 
-    for livro in livros:
+    for livro in biblioteca:
         if livro["codigo"] == codigo:
-            livros.remove(livro)
+            biblioteca.remove(livro)
             print("Livro excluído com sucesso!")
             return
 
     print("Livro não encontrado.")
 
 
-def listar_livros():
+def listar_livros(biblioteca):
     print("\n===== LIVROS CADASTRADOS =====")
 
-    if len(livros) == 0:
+    if len(biblioteca) == 0:
         print("Nenhum livro cadastrado.")
         return
 
-    for livro in livros:
+    for livro in biblioteca:
         print("-----------------------------")
         print("Código:", livro["codigo"])
         print("Título:", livro["titulo"])
@@ -82,39 +84,3 @@ def listar_livros():
         print("Quantidade:", livro["quantidade"])
 
     print("-----------------------------")
-
-
-def cadastro_livros():
-    while True:
-        print("\n================================")
-        print("         MENU DE LIVROS")
-        print("================================")
-        print("1 - Adicionar livro")
-        print("2 - Excluir livro")
-        print("3 - Listar livros")
-        print("4 - Voltar ao menu principal")
-        print("5- listar livros")
-        print("6- excluir livros")
-        print("================================")
-
-        opcao = input("Escolha uma opção: ")
-
-        if opcao == "1":
-            adicionar_livro()
-
-        elif opcao == "2":
-            excluir_livro()
-
-        elif opcao == "3":
-            listar_livros()
-
-        elif opcao == "4":
-            print("Voltando ao menu principal...")
-        elif opcao == "5":
-            print("listar livros")
-        elif opcao=="6":
-            print=("excluir livros")
-            break
-
-        else:
-            print("Opção inválida.")

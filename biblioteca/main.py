@@ -1,8 +1,8 @@
 import livros
 import alunos
 import emprestimo
-biblioteca = []
 
+biblioteca = []
 
 while True:
     print()
@@ -12,9 +12,9 @@ while True:
     print("1 - Cadastro de livros")
     print("2 - Cadastro de alunos")
     print("3 - Realizar empréstimo")
-    print("4 - excluir livros")
-    print("5- listar livros")
-    print("6- sair")
+    print("4 - Excluir livro")
+    print("5 - Listar livros")
+    print("6 - Sair")
     print("====================================")
 
     opcao_menu = input("Escolha uma opção: ")
@@ -24,18 +24,20 @@ while True:
         livros.adicionar_livro(biblioteca)
 
     elif opcao_menu == "2":
-        cadastro_alunos()
+        alunos.cadastro_alunos()
 
     elif opcao_menu == "3":
-        realizar_emprestimo()
+        emprestimo.realizar_emprestimo()
 
     elif opcao_menu == "4":
-        print("Você excluiu livros.")
-    elif opcao_menu =="5":
-        print("listar livros")
-    elif opcao_menu =="6":
-        print("sair")
+        livros.excluir_livro(biblioteca)
+
+    elif opcao_menu == "5":
+        livros.listar_livros(biblioteca)
+
+    elif opcao_menu == "6":
+        print("Saindo do sistema...")
         break
 
     else:
-        print("Número inválido. Escolha uma opção de 1 a 4.")
+        print("Número inválido. Escolha uma opção de 1 a 6.")
