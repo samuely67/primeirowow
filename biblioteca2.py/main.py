@@ -12,9 +12,11 @@ while True:
     print("1 - Cadastro de livros")
     print("2 - Cadastro de alunos")
     print("3 - Realizar empréstimo")
-    print("4 - Excluir livro")
-    print("5 - Listar livros")
-    print("6 - Sair")
+    print("4 - Devolver livro")
+    print("5 - Listar empréstimos")
+    print("6 - Excluir livro")
+    print("7 - Listar livros")
+    print("8 - Sair")
     print("====================================")
 
     opcao_menu = input("Escolha uma opção: ")
@@ -30,14 +32,20 @@ while True:
         emprestimo.realizar_emprestimo()
 
     elif opcao_menu == "4":
-        livros.excluir_livro(biblioteca)
+        emprestimo.devolver_livro()
 
     elif opcao_menu == "5":
-        livros.listar_livros(biblioteca)
+        emprestimo.listar_emprestimos()
 
     elif opcao_menu == "6":
+        livros.excluir_livro(biblioteca)
+
+    elif opcao_menu == "7":
+        livros.listar_livros(biblioteca)
+
+    elif opcao_menu == "8":
         print("Saindo do sistema...")
         break
 
     else:
-        print("Número inválido. Escolha uma opção de 1 a 6.")
+        print("Número inválido. Escolha uma opção de 1 a 8.")

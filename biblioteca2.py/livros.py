@@ -7,7 +7,7 @@ def adicionar_livro(biblioteca):
         print("Código inválido.")
         return
 
-    # Verifica se o código já existe na lista
+    
     for livro in biblioteca:
         if livro["codigo"] == codigo:
             print("Já existe um livro com esse código.")
@@ -37,7 +37,7 @@ def adicionar_livro(biblioteca):
         print("A quantidade deve ser maior que zero.")
         return
 
-    # Salva o livro como dicionário
+    
     livro = {
         "codigo": codigo,
         "titulo": titulo,
@@ -84,3 +84,4 @@ def listar_livros(biblioteca):
         print("Quantidade:", livro["quantidade"])
 
     print("-----------------------------")
+    
